@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>gestion de produits</title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/myStyle.css"/>
+</head>
+<body ng-app="myApp" >
+    <header>
+            <div class="container-fluid">
+                <ul class="nav nav-tabs nav-justified">
+                    <li > <a ui-sref="produits">produits</a> </li>
+                    <li><a  ui-sref="categories">categories</a> </li>
+                </ul>
+            </div>
+    </header>
+    <div ui-view="">
+
+    </div>
+    <div class="nav navbar-fixed-bottom">
+        <small>
+            naoufal.berouain@gmail.com
+        </small>
+    </div>
+
+
+<script type="text/javascript" src="js/jquery.min.js" ></script>
+<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="js/angular.min.js" ></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js" ></script>
+<script type="text/javascript" src="js/myApp.js" ></script>
+</body>
+</html>

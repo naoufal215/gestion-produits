@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>produits</title>
+</head>
+<body>
+<div class="container space40">
+    <div class="panel panel-info">
+        <div class="panel-heading">informations sur les produits</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-2 form-group-sm">
+                    <input class="form-control" ng-model="name"/>
+                </div>
+
+                <button class="btn btn-info" ng-click="chercher()">chercher</button>
+            </div>
+
+
+            <table class="table table-responsive">
+                <tr>
+                    <th>ID</th><th>designation</th><th>prix</th><th>quantitie</th>
+                </tr>
+                <tr ng-repeat=" p in pageProduits.content">
+                    <td>{{p.id}} </td>
+                    <td> {{p.designation}}</td>
+                    <td> {{p.prix}}</td>
+                    <td> {{p.quantite}}</td>
+                </tr>
+            </table>
+            <div class="container">
+                <ul class="pagination clickable">
+                    <li ng-class="{active:page==$index}" ng-repeat=" p in pages track by $index">
+                        <a ng-click="gotoPage($index)">{{$index}}</a>
+
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>
